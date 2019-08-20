@@ -55,7 +55,10 @@ public class ArrayAndString {
 			System.out.print("}");
 			System.out.println();
 		}
-		
+
+		Integer a = new Integer(3);
+		Integer b = new Integer(3);
+		System.out.println(a == b);
 		
 	}
 
@@ -632,6 +635,8 @@ public class ArrayAndString {
 		
 		return count == inputMinLength.length();
 	}
+
+
 }
 
 
