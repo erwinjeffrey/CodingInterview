@@ -44,4 +44,15 @@ public class Stream {
         System.out.println("Empty Strings: " + count);
 
     }
+
+    private static String[] removeWhiteSpace(String[] inputs) {
+        String[] values = Arrays.stream(inputs)
+                .filter(input -> !input.isEmpty())
+                .collect(Collectors.toList())
+                .stream()
+                .toArray(String[]::new);
+
+        return values;
+
+    }
 }

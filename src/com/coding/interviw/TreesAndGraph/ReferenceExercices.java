@@ -4,6 +4,10 @@ import java.util.*;
 
 public class ReferenceExercices {
 
+    public static void main(String[] args) {
+        System.out.println("maximumSumSubArr: " + maximumSumSubArr(new int[]{-2,-5,6,-2,-3,1,5,-6}));
+
+    }
     public static int  getMaxHeight(NodeWithParent node){
         if(node == null){
             return 0;
@@ -113,4 +117,23 @@ public class ReferenceExercices {
         }
     }
 
-}
+    private static int maximumSumSubArr(int [] arr){
+        int max_so_far = arr[0];
+        int max_ending_here = 0;
+
+        for (int i = 0; i < arr.length; i++) {
+            max_ending_here = max_ending_here + arr[i];
+
+            if(max_so_far < max_ending_here){
+                max_so_far = max_ending_here;
+            }
+            if(max_ending_here < 0){
+                max_ending_here = 0;
+            }
+        }
+        return max_so_far;
+    }
+
+
+
+   }

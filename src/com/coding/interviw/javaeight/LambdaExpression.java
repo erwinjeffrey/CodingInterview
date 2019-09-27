@@ -38,7 +38,7 @@ public class LambdaExpression {
         int operation(int a, int b);
     }
 
-    // this a functional interface, an interface with only one method
+    // this a functional interface
     interface GreetingService{
         void sayMessage(String message);
     }
